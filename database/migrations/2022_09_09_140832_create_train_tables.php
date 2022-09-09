@@ -13,17 +13,17 @@ class CreateTrainTables extends Migration
      */
     public function up()
     {
-        Schema::create('train_tables', function (Blueprint $table) {
+        Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('company');
-            $table->string('departure gate');
-            $table->string('arrival gate');
-            $table->dateTime('departure time');
-            $table->dateTime('arrival time');
+            $table->string('departure_gate');
+            $table->string('arrival_gate');
+            $table->time('departure_time');
+            $table->time('arrival_time');
             $table->string('code');
-            $table->tinyInteger('carriage numeber');
-            $table->boolean('in time');
+            $table->tinyInteger('carriage_number');
+            $table->boolean('in_time');
             $table->boolean('cancelled');
             
         });
@@ -36,6 +36,6 @@ class CreateTrainTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('train_tables');
+        Schema::dropIfExists('trains');
     }
 }

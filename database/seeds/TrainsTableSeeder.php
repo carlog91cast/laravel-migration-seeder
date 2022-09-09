@@ -17,34 +17,34 @@ class TrainsTableSeeder extends Seeder
                 'company' => 'Italo',
                 'departure gate' => 'Macerata',
                 'arrival gate' => 'Torino',
-                'departure time' => '3:00 a.m',
-                'arrival time' => '7:00 a.m',
+                'departure time' => '3:00',
+                'arrival time' => '7:00',
                 'code' => '325647',
-                'carriage numeber' => '5',
-                'in time' => 'true',
-                'cancelled' => 'false',
+                'carriage number' => 5,
+                'in time' => true,
+                'cancelled' => false,
             ],
             [
                 'company' => 'Trenitalia',
                 'departure gate' => 'Milano',
                 'arrival gate' => 'Roma',
-                'departure time' => '3:00 a.m',
-                'arrival time' => '7:00 a.m',
+                'departure time' => '3:00',
+                'arrival time' => '7:00',
                 'code' => '4523452',
-                'carriage numeber' => '10',
-                'in time' => 'true',
-                'cancelled' => 'false',
+                'carriage number' => 10,
+                'in time' => true,
+                'cancelled' => false,
             ],
             [
                 'company' => 'PDP Trains',
                 'departure gate' => 'Paperopoli',
                 'arrival gate' => 'Ocopoli',
-                'departure time' => '3:00 a.m',
-                'arrival time' => '7:00 a.m',
+                'departure time' => '3:00',
+                'arrival time' => '7:00',
                 'code' => '34523452',
-                'carriage numeber' => '14',
-                'in time' => 'false',
-                'cancelled' => 'true',
+                'carriage number' => 14,
+                'in time' => false,
+                'cancelled' => true,
             ],
         ];
         foreach ($trains as $train) {
@@ -56,7 +56,7 @@ class TrainsTableSeeder extends Seeder
             $newTrain -> arrival_time = $train['arrival time'];
             $newTrain -> code = $train['code'];
             $newTrain -> carriage_number = $train['carriage number'];
-            $newTrain -> in_time = $train['in tim'];
+            $newTrain -> in_time = $train['in time'];
             $newTrain -> cancelled = $train['cancelled'];
             $newTrain -> save();
         }
