@@ -16,6 +16,16 @@ class CreateTrainTables extends Migration
         Schema::create('train_tables', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('company');
+            $table->string('departure gate');
+            $table->string('arrival gate');
+            $table->dateTime('departure time');
+            $table->dateTime('arrival time');
+            $table->string('code');
+            $table->tinyInteger('carriage numeber');
+            $table->boolean('in time');
+            $table->boolean('cancelled');
+            
         });
     }
 
